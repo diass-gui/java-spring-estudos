@@ -1,0 +1,23 @@
+info:
+  name: Reprovar adocao
+  type: http
+  seq: 3
+
+http:
+  method: PUT
+  url: http://localhost:8080/adocoes/reprovar
+  body:
+    type: json
+    data: |-
+      {
+          "idAdocao": 1,
+          "justificativa": "Justificativa qualquer"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

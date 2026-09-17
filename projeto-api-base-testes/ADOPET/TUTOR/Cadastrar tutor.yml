@@ -1,0 +1,24 @@
+info:
+  name: Cadastrar tutor
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:8080/tutores
+  body:
+    type: json
+    data: |-
+      {
+          "nome": "Fulano da Silva",
+          "telefone": "61900000000",
+          "email": "fulano@email.com.br"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
